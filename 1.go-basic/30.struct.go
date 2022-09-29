@@ -10,6 +10,7 @@ type Customer struct {
 	// Address string
 	Name, Address string
 	Age           int
+	// Married       bool
 }
 
 func sayHi(customer Customer, name string) {
@@ -24,6 +25,19 @@ func main() {
 
 	sayHi(eko, "Joko")
 
+	//!  Struct Literals
+
+	Sule := Customer{
+		Name:    "Sule",
+		Address: "Jakarta",
+		Age:     30,
+	}
+
+	fmt.Println(Sule)
+
+	// * posisi harus sama / akan error
+	Budi := Customer{"Budi", "Jakarta", 40}
+	fmt.Println(Budi)
 	// fmt.Println(eko)
 	// fmt.Println(eko.Name)
 	// fmt.Println(eko.Address)
@@ -40,5 +54,3 @@ func main() {
 	// fmt.Println(budi)
 
 }
-
-//  struct literals
